@@ -1,11 +1,8 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Temperature from '../views/Temperature.vue'
-import Weight from '../views/Weight.vue'
 import Length from '../views/Length.vue'
-
-Vue.use(VueRouter)
+import Weight from '../views/Weight.vue'
 
 const routes = [
   {
@@ -30,8 +27,8 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
