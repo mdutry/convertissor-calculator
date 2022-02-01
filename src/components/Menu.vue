@@ -1,15 +1,15 @@
 <script>
     export default {
-        name: 'MenuItem',
+        name: 'Menu',
     }
 </script>
 
 <template>
-  <div id="menu-item">
+  <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/temperature">Temperature</router-link> |
     <router-link to="/length">Length</router-link> |
-    <router-link to="/weight">Weight</router-link> |
+    <router-link to="/weight">Weight</router-link>
   </div>
 </template>
 
