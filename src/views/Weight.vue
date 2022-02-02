@@ -57,32 +57,50 @@
       convertedTemperature() {
         if (this.valueInput && this.unitySelected && this.unityResultSelected) {
           switch (this.unitySelected) {
-            case "Celsius":
-              if (this.unityResultSelected === "Fahrenheit") {
-                this.valueConverted = (this.valueInput * 9/5) + 32
-              } else if (this.unityResultSelected === "Kelvin") {
-                this.valueConverted = this.valueInput + 273.15
+            case "Tonne":
+              switch (this.unityResultSelected) {
+                case "Kilogramme":
+                  this.valueConverted = this.valueInput * 1000
+                  break;
+                case "Gramme":
+                  this.valueConverted = this.valueInput *  1e+6
+                  break;
+                case "Milligramme":
+                  this.valueConverted = this.valueInput *  1e+9
+                  break;
+                case "Stone":
+                  this.valueConverted = this.valueInput *  157.5
+                  break;
+                case "Livre":
+                  this.valueConverted = this.valueInput *  2205
+                  break;
+                case "Once":
+                  this.valueConverted = this.valueInput *  35274
+                  break;
               }
               break;
           
-            case "Fahrenheit":
-              if (this.unityResultSelected === "Celsius") {
-                this.valueConverted = (this.valueInput - 32) * 5/9
-              } else if (this.unityResultSelected === "Kelvin") {
-                this.valueConverted = (this.valueInput - 32) * 5/9 + 273.15
+            case "Kilogramme":
+              switch (this.unityResultSelected) {
+                case "Tonne":
+                  this.valueConverted = this.valueInput * 0.001
+                  break;
+                case "Gramme":
+                  this.valueConverted = this.valueInput *  1000
+                  break;
+                case "Milligramme":
+                  this.valueConverted = this.valueInput *  1e+6
+                  break;
+                case "Stone":
+                  this.valueConverted = this.valueInput /  6.35
+                  break;
+                case "Livre":
+                  this.valueConverted = this.valueInput *  2.205
+                  break;
+                case "Once":
+                  this.valueConverted = this.valueInput *  35.274
+                  break;
               }
-              break;
-          
-            case "Kelvin":
-              if (this.unityResultSelected === "Fahrenheit") {
-                this.valueConverted = (this.valueInput - 273.15) * 9/5 + 32
-              } else if (this.unityResultSelected === "Celsius") {
-                this.valueConverted = this.valueInput - 273.15
-              }
-              break;
-          
-            default:
-              this.valueConverted = 0
               break;
           }
         }
