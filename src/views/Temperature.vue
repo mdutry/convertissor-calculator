@@ -1,7 +1,9 @@
 <template>
   <div class="mt-4">
-    <h2 class="text-2xl font-bold text-center">This is a temperature page</h2>
+    <h2 class="text-2xl font-bold text-center">Convertisseur de température</h2>
     <p class="text-center text-xl">avec <span class="text-primary">Vue.js</span></p>
+
+    <div class="py-4 w-1/2 flex justify-center mx-auto"><TemperatureIcon /></div>
     
     <div class="py-4 flex justify-around items-center">
       <div class="flex">
@@ -30,9 +32,13 @@
 </template>
 
 <script>
-  // import InputAndUnity from "../components/InputAndUnity.vue" 
+  // import InputAndUnity from "../components/InputAndUnity.vue"
+  import TemperatureIcon from "../components/svg/TemperatureIcon.vue"
   export default {
     name: 'Temperature',
+    components: {
+        TemperatureIcon
+    },
     data() {
         return {
             unityArray: ["Celsius", "Fahrenheit", "Kelvin"],
