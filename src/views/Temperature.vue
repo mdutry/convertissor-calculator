@@ -1,5 +1,6 @@
 <template>
-  <div class="temperature">
-    <h1>This is a temperature page</h1>
+  <div class="mt-4">
+    <h2 class="text-2xl font-bold text-center">This is a temperature page</h2>
+    <p class="text-center text-xl">avec <span class="text-primary">Vue.js</span></p>
   </div>
 </template>
