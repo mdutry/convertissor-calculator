@@ -3,22 +3,28 @@
     <h2 class="text-2xl font-bold text-center">This is a temperature page</h2>
     <p class="text-center text-xl">avec <span class="text-primary">Vue.js</span></p>
     
-    <div>
-        <input type="number" v-model="valueInput" @change="convertedTemperature" class="border border-black" />
-        <select class="border border-black" v-model="unitySelected" @change="convertedTemperature">
-            <option v-for="unity in unityArray" :value="unity" :key="unity">
-                {{ unity }}
-            </option>
-        </select>
-    </div>
-    
-    <div>
-        <input type="number" :value="valueConverted" disabled class="border border-black" />
-        <select class="border border-black" v-model="unityResultSelected" @change="convertedTemperature">
-            <option v-for="unity in unityResultFilter" :value="unity" :key="unity">
-                {{ unity }}
-            </option>
-        </select>
+    <div class="py-4 flex justify-around items-center">
+      <div class="flex">
+          <input type="number" v-model="valueInput" @change="convertedTemperature" class="border-2 border-primary px-2" />
+          <span class="bg-primary inline-flex px-2">
+            <select class="bg-primary" v-model="unitySelected" @change="convertedTemperature">
+                <option class="h-full" v-for="unity in unityArray" :value="unity" :key="unity">
+                    {{ unity }}
+                </option>
+            </select>
+          </span>
+      </div>
+      
+      <div class="flex">
+          <input type="number" :value="valueConverted.toFixed(2)" disabled class="border-2 border-primary px-2" />
+          <span class="bg-primary inline-flex px-2">
+            <select class="bg-primary" v-model="unityResultSelected" @change="convertedTemperature">
+                <option v-for="unity in unityResultFilter" :value="unity" :key="unity">
+                    {{ unity }}
+                </option>
+            </select>
+          </span>
+      </div>
     </div>
   </div>
 </template>
