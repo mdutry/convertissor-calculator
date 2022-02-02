@@ -18,7 +18,7 @@
       </div>
       
       <div class="flex">
-          <input type="number" :value="valueConverted.toFixed(2)" disabled class="border-2 border-primary px-2" />
+          <input type="number" :value="parseFloat(valueConverted.toFixed(6))" disabled class="border-2 border-primary px-2" />
           <span class="bg-primary inline-flex px-2">
             <select class="bg-primary" v-model="unityResultSelected" @change="convertedTemperature">
                 <option v-for="unity in unityResultFilter" :value="unity" :key="unity">
