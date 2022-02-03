@@ -41,7 +41,7 @@
     },
     data() {
         return {
-            unityArray: ["Tonne", "Kilogramme", "Gramme", "Milligramme", "Stone", "Livre", "Once"],
+            unityArray: ["Mille par heure", "Pied par seconde", "Kilomètre par heure", "Mètre par seconde", "Noeud"],
             valueInput: 0,
             valueConverted: 0,
             unitySelected: "",
@@ -57,163 +57,87 @@
       convertedTemperature() {
         if (this.valueInput && this.unitySelected && this.unityResultSelected) {
           switch (this.unitySelected) {
-            case "Tonne":
+            case "Mille par heure":
               switch (this.unityResultSelected) {
-                case "Kilogramme":
-                  this.valueConverted = this.valueInput * 1000
+                case "Pied par seconde":
+                  this.valueConverted = this.valueInput * 1.467
                   break;
-                case "Gramme":
-                  this.valueConverted = this.valueInput *  1e+6
+                case "Kilomètre par heure":
+                  this.valueConverted = this.valueInput * 1.609
                   break;
-                case "Milligramme":
-                  this.valueConverted = this.valueInput *  1e+9
+                case "Mètre par seconde":
+                  this.valueConverted = this.valueInput / 2.237
                   break;
-                case "Stone":
-                  this.valueConverted = this.valueInput *  157.5
-                  break;
-                case "Livre":
-                  this.valueConverted = this.valueInput *  2205
-                  break;
-                case "Once":
-                  this.valueConverted = this.valueInput *  35274
+                case "Noeud":
+                  this.valueConverted = this.valueInput / 1.151
                   break;
               }
               break;
-          
-            case "Kilogramme":
+
+            case "Pied par seconde":
               switch (this.unityResultSelected) {
-                case "Tonne":
-                  this.valueConverted = this.valueInput * 0.001
+                case "Mille par heure":
+                  this.valueConverted = this.valueInput / 1.467
                   break;
-                case "Gramme":
-                  this.valueConverted = this.valueInput * 1000
+                case "Kilomètre par heure":
+                  this.valueConverted = this.valueInput * 1.097
                   break;
-                case "Milligramme":
-                  this.valueConverted = this.valueInput * 1e+6
+                case "Mètre par seconde":
+                  this.valueConverted = this.valueInput / 3.281
                   break;
-                case "Stone":
-                  this.valueConverted = this.valueInput / 6.35
-                  break;
-                case "Livre":
-                  this.valueConverted = this.valueInput * 2.205
-                  break;
-                case "Once":
-                  this.valueConverted = this.valueInput * 35.274
+                case "Noeud":
+                  this.valueConverted = this.valueInput / 1.688
                   break;
               }
               break;
-          
-            case "Gramme":
+
+            case "Kilomètre par heure":
               switch (this.unityResultSelected) {
-                case "Tonne":
-                  this.valueConverted = this.valueInput / 1e+6
+                case "Mille par heure":
+                  this.valueConverted = this.valueInput / 1.609
                   break;
-                case "Kilogramme":
-                  this.valueConverted = this.valueInput / 1000
+                case "Pied par seconde":
+                  this.valueConverted = this.valueInput / 1.097
                   break;
-                case "Milligramme":
-                  this.valueConverted = this.valueInput * 1000
+                case "Mètre par seconde":
+                  this.valueConverted = this.valueInput / 3.6
                   break;
-                case "Stone":
-                  this.valueConverted = this.valueInput / 6350
-                  break;
-                case "Livre":
-                  this.valueConverted = this.valueInput / 454
-                  break;
-                case "Once":
-                  this.valueConverted = this.valueInput / 28.35
+                case "Noeud":
+                  this.valueConverted = this.valueInput / 1.852
                   break;
               }
               break;
-          
-            case "Milligramme":
+
+            case "Mètre par seconde":
               switch (this.unityResultSelected) {
-                case "Tonne":
-                  this.valueConverted = this.valueInput / 1e+9
+                case "Mille par heure":
+                  this.valueConverted = this.valueInput * 2.237
                   break;
-                case "Kilogramme":
-                  this.valueConverted = this.valueInput / 1e+6
+                case "Pied par seconde":
+                  this.valueConverted = this.valueInput * 3.281
                   break;
-                case "Gramme":
-                  this.valueConverted = this.valueInput / 1000
+                case "Kilomètre par heure":
+                  this.valueConverted = this.valueInput * 3.6
                   break;
-                case "Stone":
-                  this.valueConverted = this.valueInput / 6.35e+6
-                  break;
-                case "Livre":
-                  this.valueConverted = this.valueInput / 453592
-                  break;
-                case "Once":
-                  this.valueConverted = this.valueInput / 28350
+                case "Noeud":
+                  this.valueConverted = this.valueInput * 1.944
                   break;
               }
               break;
-          
-            case "Stone":
+
+            case "Noeud":
               switch (this.unityResultSelected) {
-                case "Tonne":
-                  this.valueConverted = this.valueInput / 157
+                case "Mille par heure":
+                  this.valueConverted = this.valueInput / 1.151
                   break;
-                case "Kilogramme":
-                  this.valueConverted = this.valueInput * 6.35
+                case "Pied par seconde":
+                  this.valueConverted = this.valueInput / 1.688
                   break;
-                case "Gramme":
-                  this.valueConverted = this.valueInput * 6350
+                case "Kilomètre par heure":
+                  this.valueConverted = this.valueInput * 1.852
                   break;
-                case "Milligramme":
-                  this.valueConverted = this.valueInput * 6.35e+6
-                  break;
-                case "Livre":
-                  this.valueConverted = this.valueInput * 14
-                  break;
-                case "Once":
-                  this.valueConverted = this.valueInput * 224
-                  break;
-              }
-              break;
-          
-            case "Livre":
-              switch (this.unityResultSelected) {
-                case "Tonne":
-                  this.valueConverted = this.valueInput / 2205
-                  break;
-                case "Kilogramme":
-                  this.valueConverted = this.valueInput / 2.205
-                  break;
-                case "Gramme":
-                  this.valueConverted = this.valueInput * 454
-                  break;
-                case "Milligramme":
-                  this.valueConverted = this.valueInput * 453592
-                  break;
-                case "Stone":
-                  this.valueConverted = this.valueInput / 14
-                  break;
-                case "Once":
-                  this.valueConverted = this.valueInput * 16
-                  break;
-              }
-              break;
-          
-            case "Once":
-              switch (this.unityResultSelected) {
-                case "Tonne":
-                  this.valueConverted = this.valueInput / 35274
-                  break;
-                case "Kilogramme":
-                  this.valueConverted = this.valueInput / 35.274
-                  break;
-                case "Gramme":
-                  this.valueConverted = this.valueInput * 28.35
-                  break;
-                case "Milligramme":
-                  this.valueConverted = this.valueInput * 28350
-                  break;
-                case "Stone":
-                  this.valueConverted = this.valueInput / 224
-                  break;
-                case "Livre":
-                  this.valueConverted = this.valueInput / 16
+                case "Mètre par seconde":
+                  this.valueConverted = this.valueInput / 1.944
                   break;
               }
               break;
