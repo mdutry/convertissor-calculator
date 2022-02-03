@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Temperature from '../views/Temperature.vue'
 import Length from '../views/Length.vue'
 import Weight from '../views/Weight.vue'
+import Speed from '../views/Speed.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/weight',
     name: 'Poids',
     component: Weight
+  },
+  {
+    path: '/speed',
+    name: 'Vitesse',
+    component: Speed
   }
 ]
 

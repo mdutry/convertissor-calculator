@@ -6,6 +6,7 @@
       <BlockItem title="Temperature" />
       <BlockItem title="Length" />
       <BlockItem title="Weight" />
+      <BlockItem title="Speed" />
     </div>
   </div>
 </template>

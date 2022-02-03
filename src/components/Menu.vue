@@ -13,7 +13,8 @@
     </router-link> |
     <router-link to="/temperature" class="mx-2 font-bold">Temperature</router-link> |
     <router-link to="/length" class="mx-2 font-bold">Length</router-link> |
-    <router-link to="/weight" class="mx-2 font-bold">Weight</router-link>
+    <router-link to="/weight" class="mx-2 font-bold">Weight</router-link> |
+    <router-link to="/speed" class="mx-2 font-bold">Speed</router-link>
   </div>
 </template>
 
