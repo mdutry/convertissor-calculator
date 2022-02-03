@@ -9,6 +9,9 @@
         <div v-else-if="title === 'Temperature'" class="flex flex-col justify-center items-center">
             <TemperatureIcon />
         </div>
+        <div v-else-if="title === 'Speed'" class="flex flex-col justify-center items-center">
+            <SpeedIcon />
+        </div>
         <h3 class="mt-4 font-bold text-xl uppercase">{{ title }}</h3>
     </div>
 </template>
@@ -17,11 +20,14 @@
     import LengthIcon from './svg/LengthIcon.vue'
     import TemperatureIcon from "./svg/TemperatureIcon.vue"
     import WeightIcon from "./svg/WeightIcon.vue"
+    import SpeedIcon from "./svg/SpeedIcon.vue"
+    
     export default {
         components: {
             TemperatureIcon,
             LengthIcon,
-            WeightIcon
+            WeightIcon,
+            SpeedIcon
         },
         props: {
             title: {
